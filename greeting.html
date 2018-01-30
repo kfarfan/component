@@ -15,15 +15,36 @@
          render() {
            return (
              <div>
-             <h1>Ipsum</h1>
-             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+             <h1>Gangster Ipsum By: {this.props.name}</h1>
+             <h6>{this.props.absurd}</h6>
+             <img src={this.props.image}/>
+             <p>{this.props.text1}</p>
+             <p>{this.props.text2}</p>
+             <a href={this.props.link}>Click To Buy Gangster Shakespeare</a>
              </div>
            );
          }
        }
 
+       const info = {
+         image:"https://i2.wp.com/reactscript.com/wp-content/uploads/2016/06/React-Components-For-The-Web-Animations-API.gif",
+         text1: "Lorizzle pot phat own yo' amizzle, fizzle adipiscing dope. Nullizzle bizzle velizzle, break it down shizznit, funky fresh mofo, vizzle, i saw beyonces tizzles and my pizzle went crizzle. Pellentesque da bomb tortizzle. Sed erizzle. Yo izzle hizzle dope turpis tempizzle for sure. Maurizzle yo mamma go to hizzle izzle crunk. Uhuh ... yih! fizzle. Pellentesque for sure rhoncus shiz. In you son of a bizzle habitasse platea dictumst. Phat dapibizzle. Curabitur tellus urna, fo shizzle fo shizzle mah nizzle fo rizzle, mah home g-dizzle, mattizzle yo, eleifend vitae, nunc. Pot suscipizzle. Integer sempizzle velizzle sizzle dizzle.",
+         text2: "Sure check it out urna, check out this izzle, tristique fo shizzle, sollicitudin izzle, we gonna chung. Rizzle black, gizzle egestizzle facilisizzle gizzle, neque justo consequizzle shit, mollizzle dawg erizzle izzle purus. Things pimpin' taciti ma nizzle izzle break it down torquent pizzle conubia nostra, pizzle inceptizzle hymenizzle. Aliquam mauris orci, for sure eget, iaculizzle fo shizzle mah nizzle fo rizzle, mah home g-dizzle, accumsan da bomb, elit. Nunc lacizzle. Mah nizzle velizzle da bomb, accumsizzle eu, bow wow wow go to hizzle, yo sure, sapien. Curabitur condimentizzle. Mofo nizzle fo crunk shizzle my nizzle crocodizzle mattizzle break it down. Integizzle mofo funky fresh, laorizzle fo, shiz quizzle, pizzle get down get down, gangsta. Maecenizzle ut pede. Nam nibh. Nulla bling bling. Away shizznit. Maecenizzle metizzle boofron, semper non, lobortizzle bow wow wow, molestie quizzle, lacizzle.",
+         name: "Shakespeare",
+       }
+
+       Ipsum.defaultProps = {
+         link: "https://www.amazon.com/Hamlet-Gangsta-Shakespeare-William/dp/1453808752",
+         absurd: "#random #whatislife #thuglife",
+       }
+
+
        ReactDOM.render(
-         <Ipsum />, document.getElementById('app')
+         <Ipsum
+            name={info.name}
+            image={info.image}
+            text1={info.text1}
+            text2={info.text2}/>, document.getElementById('app')
        );
 
     </script>
