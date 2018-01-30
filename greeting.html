@@ -12,12 +12,20 @@
     <script type="text/babel">
 
       class Ipsum extends React.Component {
+        constructor(props){
+           super(props);
+           this.state = {
+             number: 1
+           }
+         }
+
          render() {
            return (
              <div>
              <h1>Gangster Ipsum By: {this.props.name}</h1>
              <h6>{this.props.absurd}</h6>
              <img src={this.props.image}/>
+             <h2>Chapter: {this.state.number}</h2>
              <p>{this.props.text1}</p>
              <p>{this.props.text2}</p>
              <a href={this.props.link}>Click To Buy Gangster Shakespeare</a>
